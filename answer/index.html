@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coaches to the Mound</title>
+  </head>
+  <body ng-app="VisitApp">
+    <div ng-controller="VisitsController as VC">
+      <h1>Coach's Visits</h1>
+      <h3>The average team in 2016 made {{VC.total}} visits to the mound.</h3>
+      <p ng-repeat="visit in VC.visits">{{visit.team}}'s coach visited the mound {{visit.count}} times during the 2016 regular season.  Their Normalized Coach Visit Rate (nCVR-) is {{visit.count / VC.total * 100 | number:0}}.  </p>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
